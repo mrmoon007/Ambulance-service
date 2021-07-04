@@ -1,7 +1,7 @@
 <footer class="footer mt-auto">
     <div class="copyright bg-white">
         <p>
-            &copy; <span id="copy-year">2019</span> Copyright A Services Limited.Template by
+            &copy; <span id="copy-year">2019</span> Copyright A Services Limited. All rights reserved. Developed by
             <a class="text-primary" href="" target="_blank">MR Moon</a>.
         </p>
     </div>

@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/admin', function () {
-//     return view('backend.pages.index');
+// Route::get('/', function () {
+//     return view('welcome');
 // });
 
 // frontend route start here
@@ -32,5 +32,9 @@ Route::get('/contact',[FrontendController::class,'contact'])->name('frontend.con
 // backend route start here
 Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
 
-    Route::get('/',[BackendController::class,'index'])->name('backend.index');
+    Route::get('/logout',[BackendController::class,'Logout'])->name('backend.logout');
 });
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/admin/dashboard', function () {
+    return view('backend.pages.index');
+})->name('dashboard');
