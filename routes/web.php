@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\BackendController;
 use App\Http\Controllers\Frontend\FrontendController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/admin', function () {
-    return view('frontend.pages.index');
-});
+// Route::get('/admin', function () {
+//     return view('backend.pages.index');
+// });
 
 // frontend route start here
 Route::get('/',[FrontendController::class,'index'])->name('frontend.index');
@@ -30,5 +31,6 @@ Route::get('/contact',[FrontendController::class,'contact'])->name('frontend.con
 
 // backend route start here
 Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
-    
+
+    Route::get('/',[BackendController::class,'index'])->name('backend.index');
 });

@@ -1,18 +1,18 @@
 @extends('frontend.layout.master')
 
 @section('title')
-    
+
 @endsection
 
 @section('css')
-    
+
 @endsection
 
 @section('content')
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
         <div class="container">
-  
+
           <div class="d-flex justify-content-between align-items-center">
             <h2>About</h2>
             <ol>
@@ -20,14 +20,14 @@
               <li>About</li>
             </ol>
           </div>
-  
+
         </div>
       </section><!-- End Breadcrumbs -->
-  
+
       <!-- ======= About Us Section ======= -->
       <section id="about-us" class="about-us">
         <div class="container" data-aos="fade-up">
-  
+
           <div class="row content">
             <div class="col-lg-6" data-aos="fade-right">
               <h2>Eum ipsam laborum deleniti velitena</h2>
@@ -50,21 +50,21 @@
               </p>
             </div>
           </div>
-  
+
         </div>
       </section><!-- End About Us Section -->
-  
+
       <!-- ======= Our Team Section ======= -->
       <section id="team" class="team section-bg">
         <div class="container">
-  
+
           <div class="section-title" data-aos="fade-up">
             <h2>Our <strong>Team</strong></h2>
             <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
           </div>
-  
+
           <div class="row">
-  
+
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
               <div class="member" data-aos="fade-up">
                 <div class="member-img">
@@ -82,7 +82,7 @@
                 </div>
               </div>
             </div>
-  
+
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
               <div class="member" data-aos="fade-up" data-aos-delay="100">
                 <div class="member-img">
@@ -100,7 +100,7 @@
                 </div>
               </div>
             </div>
-  
+
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
               <div class="member" data-aos="fade-up" data-aos-delay="200">
                 <div class="member-img">
@@ -118,7 +118,7 @@
                 </div>
               </div>
             </div>
-  
+
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
               <div class="member" data-aos="fade-up" data-aos-delay="300">
                 <div class="member-img">
@@ -136,76 +136,14 @@
                 </div>
               </div>
             </div>
-  
+
           </div>
-  
+
         </div>
       </section><!-- End Our Team Section -->
   
-      <!-- ======= Our Clients Section ======= -->
-      <section id="clients" class="clients">
-        <div class="container" data-aos="fade-up">
-  
-          <div class="section-title">
-            <h2>Clients</h2>
-          </div>
-  
-          <div class="row no-gutters clients-wrap clearfix" data-aos="fade-up">
-  
-            <div class="col-lg-3 col-md-4 col-6">
-              <div class="client-logo">
-                <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
-              </div>
-            </div>
-  
-            <div class="col-lg-3 col-md-4 col-6">
-              <div class="client-logo">
-                <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
-              </div>
-            </div>
-  
-            <div class="col-lg-3 col-md-4 col-6">
-              <div class="client-logo">
-                <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-              </div>
-            </div>
-  
-            <div class="col-lg-3 col-md-4 col-6">
-              <div class="client-logo">
-                <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-              </div>
-            </div>
-  
-            <div class="col-lg-3 col-md-4 col-6">
-              <div class="client-logo">
-                <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-              </div>
-            </div>
-  
-            <div class="col-lg-3 col-md-4 col-6">
-              <div class="client-logo">
-                <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
-              </div>
-            </div>
-  
-            <div class="col-lg-3 col-md-4 col-6">
-              <div class="client-logo">
-                <img src="assets/img/clients/client-7.png" class="img-fluid" alt="">
-              </div>
-            </div>
-  
-            <div class="col-lg-3 col-md-4 col-6">
-              <div class="client-logo">
-                <img src="assets/img/clients/client-8.png" class="img-fluid" alt="">
-              </div>
-            </div>
-  
-          </div>
-  
-        </div>
-      </section><!-- End Our Clients Section -->
 @endsection
 
 @section('script')
-    
+
 @endsection
