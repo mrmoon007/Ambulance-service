@@ -17,7 +17,7 @@
 </head>
 
 
-<body class="sidebar-fixed sidebar-dark header-light header-fixed" id="body">
+<body class="sidebar-fixed sidebar-dark header-dark header-fixed" id="body">
     <script>
         NProgress.configure({
             showSpinner: false
@@ -51,7 +51,9 @@
 
     @include('backend.layouts.partails.script')
 
-    @yield('script')
+    <script>
+        @yield('script')
+    </script>
 
 
 </body>

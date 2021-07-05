@@ -8,9 +8,9 @@ use Illuminate\Support\Facades\Auth;
 
 class BackendController extends Controller
 {
-    public function index()
+    public function SocialMedia()
     {
-        return view('backend.pages.index');
+        return view('backend.pages.site_setting.social_media');
     }
 
     public function Logout(){

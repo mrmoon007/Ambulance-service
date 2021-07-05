@@ -7,7 +7,7 @@
     <div id="sidebar" class="sidebar sidebar-with-footer">
         <!-- Aplication Brand -->
         <div class="app-brand">
-            <a href="/index.html">
+            <a href="{{ route('dashboard') }}">
                 <svg class="brand-icon" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="30"
                     height="33" viewBox="0 0 30 33">
                     <g fill="none" fill-rule="evenodd">
@@ -15,7 +15,7 @@
                         <path class="logo-fill-white" fill="#FFF" d="M11 4v25l8 4V0z" />
                     </g>
                 </svg>
-                <span class="brand-name">Sleek Dashboard</span>
+                <span class="brand-name">Admin Dashboard</span>
             </a>
         </div>
         <!-- begin sidebar scrollbar -->
@@ -38,8 +38,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="sidenav-item-link" href="analytics.html">
-                                    <span class="nav-text">Analytics</span>
+                                <a class="sidenav-item-link" href="{{ route('admin.slider.index') }}">
+                                    <span class="nav-text">slider</span>
 
                                     <span class="badge badge-success">new</span>
 
@@ -52,103 +52,19 @@
                 <li class="has-sub">
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                         data-target="#ui-elements" aria-expanded="false" aria-controls="ui-elements">
-                        <i class="mdi mdi-folder-multiple-outline"></i>
-                        <span class="nav-text">UI Elements</span> <b class="caret"></b>
+                        <i class="mdi mdi-settings"></i>
+                        <span class="nav-text">Site Settings</span> <b class="caret"></b>
                     </a>
                     <ul class="collapse" id="ui-elements" data-parent="#sidebar-menu">
                         <div class="sub-menu">
 
 
                             <li class="has-sub">
-                                <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                                    data-target="#components" aria-expanded="false" aria-controls="components">
-                                    <span class="nav-text">Components</span> <b class="caret"></b>
+                                <a class="sidenav-item-link" href="{{ route('admin.backend.social.media') }}"
+                                     aria-expanded="false" aria-controls="components">
+                                    <span >Social Media</span>
                                 </a>
-                                <ul class="collapse" id="components">
-                                    <div class="sub-menu">
 
-                                        <li>
-                                            <a href="alert.html">Alert</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="badge.html">Badge</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="breadcrumb.html">Breadcrumb</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="button-default.html">Button Default</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="button-dropdown.html">Button Dropdown</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="button-group.html">Button Group</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="button-social.html">Button Social</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="button-loading.html">Button Loading</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="card.html">Card</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="carousel.html">Carousel</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="collapse.html">Collapse</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="list-group.html">List Group</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="modal.html">Modal</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="pagination.html">Pagination</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="popover-tooltip.html">Popover & Tooltip</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="progress-bar.html">Progress Bar</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="spinner.html">Spinner</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="switcher.html">Switcher</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="table.html">Table</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="tab.html">Tab</a>
-                                        </li>
-
-                                    </div>
-                                </ul>
                             </li>
 
                             <li class="has-sub">
@@ -435,13 +351,14 @@
                     </ul>
                 </li>
 
+
             </ul>
 
         </div>
 
         <hr class="separator" />
 
-        <div class="sidebar-footer">
+        {{-- <div class="sidebar-footer">
             <div class="sidebar-footer-content">
                 <h6 class="text-uppercase">
                     Cpu Uses <span class="float-right">40%</span>
@@ -456,6 +373,6 @@
                     <div class="progress-bar progress-bar-warning" style="width: 65%;" role="progressbar"></div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 </aside>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\BackendController;
+use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Frontend\FrontendController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,9 +33,12 @@ Route::get('/contact',[FrontendController::class,'contact'])->name('frontend.con
 // backend route start here
 Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
 
+    Route::resource('/slider',SliderController::class);
     Route::get('/logout',[BackendController::class,'Logout'])->name('backend.logout');
+    Route::get('/social/media',[BackendController::class,'SocialMedia'])->name('backend.social.media');
+
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/admin/dashboard', function () {
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('backend.pages.index');
 })->name('dashboard');
