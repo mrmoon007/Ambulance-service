@@ -30,7 +30,7 @@ class BackendController extends Controller
             'oldpassword' => 'required',
             'password' => 'required|confirmed'
         ]);
-        // return $request;
+        
         $hashedPassword = Auth::user()->password;
         if(Hash::check($request->oldpassword,$hashedPassword)){
             $user = User::find(Auth::id());
@@ -43,6 +43,29 @@ class BackendController extends Controller
             return redirect()->back()->with('error','Current Password IS Invalid');
         }
 
+    }
+
+    public function Cprofile(){
+        if(Auth::user()){
+            $user = User::find(Auth::user()->id);
+            if($user){
+                return view('backend.pages.site_setting.update_profile',compact('user'));
+            }
+        }
+    }
+
+    public function UpdateProfile(Request $request){
+        $user = User::find(Auth::user()->id);
+        if($user){
+            $user->name = $request['name'];
+            $user->email = $request['email'];
+
+            $user->save();
+            return Redirect()->back()->with('success','User Profile Is update Successfully');
+
+        }else{
+            return Redirect()->back();
+        }
     }
 
 }
