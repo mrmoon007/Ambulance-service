@@ -17,7 +17,7 @@
 </head>
 
 
-<body class="sidebar-fixed sidebar-dark header-dark header-fixed" id="body">
+<body class="sidebar-fixed sidebar-dark header-dark header-fixed " id="body">
     <script>
         NProgress.configure({
             showSpinner: false

@@ -38,6 +38,8 @@ Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
     Route::resource('/slider',SliderController::class);
     Route::resource('/contact',ContactController::class);
     Route::get('/logout',[BackendController::class,'Logout'])->name('backend.logout');
+    Route::get('/password',[BackendController::class,'Cpassword'])->name('backend.password');
+    Route::post('/password/update',[BackendController::class,'UpdatePassword'])->name('backend.password.update');
     Route::get('/portfolio/index',[ProtefolioController::class,'portfolioIndex'])->name('backend.portfolioIndex');
     Route::get('/portfolio/create',[ProtefolioController::class,'portfolioCreate'])->name('backend.portfolioCreate');
     Route::post('/portfolio/store',[ProtefolioController::class,'portfolioStore'])->name('backend.portfolioStore');

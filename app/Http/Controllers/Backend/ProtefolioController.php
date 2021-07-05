@@ -29,7 +29,7 @@ class ProtefolioController extends Controller
         foreach ($image as $multi_img) {
 
             $name_gen = hexdec(uniqid()) . '.' . $multi_img->getClientOriginalExtension();
-            Image::make($multi_img)->resize(500, 500)->save('image/portfolio/' . $name_gen);
+            Image::make($multi_img)->resize(400, 400)->save('image/portfolio/' . $name_gen);
 
             $last_img = 'image/portfolio/' . $name_gen;
 
@@ -43,7 +43,7 @@ class ProtefolioController extends Controller
 
 
 
-        return Redirect()->back()->with('success', 'Brand Inserted Successfully');
+        return Redirect()->route('admin.backend.portfolioIndex');
     }
 
     public function portfolioDelete($id)

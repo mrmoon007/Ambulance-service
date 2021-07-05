@@ -21,16 +21,26 @@
                 <table id="contacttable" class="table table-striped " style="width:100%">
                     <thead>
                         <tr>
+                            <th>SL</th>
                             <th>Image</th>
                             <th>Categories</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($portfolioes as $portfolio)
+                        @foreach ($portfolioes as $key=> $portfolio)
                             <tr>
+                                <td>{{ $key+1 }}</td>
                                 <td><img src="{{ asset($portfolio->image) }}" style="height:100px; width:100px;" ></td>
-                                <td>{{ $portfolio->cetagory }}</td>
+                                <td>
+                                    @if ($portfolio->cetagory=='1')
+                                        AC Ambulance
+                                    @elseif ($portfolio->cetagory=='2')
+                                        Non-AC Ambulance
+                                    @else
+                                        Freezer Van Ambulance
+                                    @endif
+                                </td>
                                 <td>
                                     {{-- <a href="{{ route('admin.backend.portfolioCreate',$portfolio->id) }}" class="btn btn-sm btn-info">Edit</a> --}}
 

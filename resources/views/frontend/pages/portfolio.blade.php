@@ -34,43 +34,47 @@
                 <li data-filter="*" class="filter-active">All</li>
                 <li data-filter=".filter-app">AC Ambulance
                 </li>
-                <li data-filter=".filter-card">Non-AC Ambulance</li>
-                <li data-filter=".filter-web">Freezer Van Ambulance</li>
+                <li data-filter=".filter-web">Non-AC Ambulance</li>
+                <li data-filter=".filter-card">Freezer Van Ambulance</li>
               </ul>
             </div>
           </div>
 
           <div class="row portfolio-container" data-aos="fade-up">
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
+            @foreach ($Acportfolio as $acitem)
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <img src="{{ asset($acitem->image) }}" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                    <h4>AC Ambulance</h4>
+                    <a href="{{ asset($acitem->image) }}" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
+                    </div>
+                </div>
+            @endforeach
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
-                <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
+
+            @foreach ($nonAcportfolio as $nonacitem)
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                    <img src="{{ asset($nonacitem->image) }}" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                    <h4>Non-AC Ambulance</h4>
+                    <a href="{{ asset($nonacitem->image) }}" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+
+                    </div>
+                </div>
+            @endforeach
+
+            @foreach ($frezportfolio as $frezitem)
+                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                    <img src="{{ asset($nonacitem->image) }}" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                    <h4>Freezer Van Ambulance</h4>
+                    <a href="{{ asset($nonacitem->image) }}" data-gall="portfolioGallery" class="venobox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+
+                    </div>
+                </div>
+            @endforeach
 
           </div>
 

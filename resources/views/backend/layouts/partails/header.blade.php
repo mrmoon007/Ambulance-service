@@ -21,7 +21,7 @@
 
         <div class="navbar-right ">
             <ul class="nav navbar-nav">
-                {{-- <li class="dropdown notifications-menu">
+                <li class="dropdown notifications-menu">
                     <button class="dropdown-toggle" data-toggle="dropdown">
                         <i class="mdi mdi-bell-outline"></i>
                     </button>
@@ -66,7 +66,7 @@
                             <a class="text-center" href="#"> View All </a>
                         </li>
                     </ul>
-                </li> --}}
+                </li>
                 <!-- User Account -->
                 <li class="dropdown user-menu">
                     <button href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
@@ -88,8 +88,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href="email-inbox.html">
-                                <i class="mdi mdi-email"></i> Message
+                            <a href="{{ route('admin.backend.password') }}">
+                                <i class="mdi mdi-email"></i> Change Password
                             </a>
                         </li>
                         <li>
