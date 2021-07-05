@@ -4,15 +4,17 @@
     <div class="footer-top">
       <div class="container">
         <div class="row">
-
+            @php
+                $fcontact = DB::table('contacts')->first();
+            @endphp
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Company</h3>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              {{ $fcontact->address }} <br>
+              {{ $fcontact->state }}<br>
+              {{ $fcontact->country }} <br><br>
+              <strong>Phone:</strong> +88{{ $fcontact->phone_1 }}<br>
+              <strong>Email:</strong> {{ $fcontact->email_1 }}<br>
             </p>
           </div>
 

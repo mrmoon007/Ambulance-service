@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Contact;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,8 @@ class FrontendController extends Controller
     public function index()
     {
         $f_slideres= Slider::get();
-        return view('frontend.pages.index',compact('f_slideres'));
+        $fcontact=Contact::first();
+        return view('frontend.pages.index',compact('f_slideres','fcontact'));
     }
 
     public function about()
@@ -31,6 +33,7 @@ class FrontendController extends Controller
 
     public function contact()
     {
-        return view('frontend.pages.contact');
+        $fcontact=Contact::first();
+        return view('frontend.pages.contact',compact('fcontact'));
     }
 }
