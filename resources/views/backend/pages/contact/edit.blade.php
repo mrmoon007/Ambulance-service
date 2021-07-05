@@ -93,7 +93,5 @@
 @endsection
 
 @section('script')
-$(document).ready(function() {
-    $('#contacttable').DataTable();
-} );
+
 @endsection

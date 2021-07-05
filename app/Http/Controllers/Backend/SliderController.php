@@ -101,6 +101,10 @@ class SliderController extends Controller
      */
     public function destroy($id)
     {
+        $image = Slider::find($id);
+        $old_image = $image->image;
+        unlink($old_image);
+
         $slider=Slider::find($id);
         $slider->delete();
 

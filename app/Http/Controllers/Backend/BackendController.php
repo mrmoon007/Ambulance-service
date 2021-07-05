@@ -18,4 +18,6 @@ class BackendController extends Controller
         return Redirect()->route('login')->with('success','User Logout');
     }
 
+    
+
 }

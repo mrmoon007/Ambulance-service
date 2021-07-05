@@ -10,7 +10,7 @@
             <div class="carousel-container">
               <div class="carousel-content animate__animated animate__fadeInUp">
                 <h2>Contact <span>Us</span></h2>
-                <h4><span>01738897887 ,</span> <span> 01738897887</span> </h4>
+                <h4><span>{{ $fcontact->phone_1 }},</span> <span>{{ $fcontact->phone_2 }}</span> </h4>
                 {{-- <div class="text-center"><a href="" class="btn-get-started">Read More</a></div> --}}
               </div>
             </div>

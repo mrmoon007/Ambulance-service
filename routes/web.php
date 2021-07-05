@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backend\BackendController;
 use App\Http\Controllers\Backend\ContactController;
+use App\Http\Controllers\Backend\ProtefolioController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Frontend\FrontendController;
 use Illuminate\Support\Facades\Route;
@@ -37,6 +38,10 @@ Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
     Route::resource('/slider',SliderController::class);
     Route::resource('/contact',ContactController::class);
     Route::get('/logout',[BackendController::class,'Logout'])->name('backend.logout');
+    Route::get('/portfolio/index',[ProtefolioController::class,'portfolioIndex'])->name('backend.portfolioIndex');
+    Route::get('/portfolio/create',[ProtefolioController::class,'portfolioCreate'])->name('backend.portfolioCreate');
+    Route::post('/portfolio/store',[ProtefolioController::class,'portfolioStore'])->name('backend.portfolioStore');
+    Route::get('/portfolio/delete/{id}',[ProtefolioController::class,'portfolioDelete'])->name('backend.portfolioDelete');
     Route::get('/social/media',[BackendController::class,'SocialMedia'])->name('backend.social.media');
 
 });

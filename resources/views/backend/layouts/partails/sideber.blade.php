@@ -41,7 +41,15 @@
                                 <a class="sidenav-item-link" href="{{ route('admin.slider.index') }}">
                                     <span class="nav-text">slider</span>
 
-                                    <span class="badge badge-success">new</span>
+                                    {{-- <span class="badge badge-success">new</span> --}}
+
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sidenav-item-link" href="{{ route('admin.backend.portfolioIndex') }}">
+                                    <span class="nav-text">Portfolio</span>
+
+                                    {{-- <span class="badge badge-success">new</span> --}}
 
                                 </a>
                             </li>
