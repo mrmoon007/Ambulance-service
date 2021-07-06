@@ -47,9 +47,14 @@
                                         @endif
                                     </td>
                                     <td>
-                                        <a href="" class="btn btn-sm btn-info">Edit</a>
+                                        <a href="{{ route('admin.service.edit',$service->id) }}" class="btn btn-sm btn-info"><span class="mdi mdi-square-edit-outline"></span></a>
     
-                                        {{-- <a href="" onclick="return confirm('Are you sure to delete')" class="btn btn-sm btn-danger">Delete</a> --}}
+                                        <a href="{{ route('admin.service.status',$service->id) }}" class="btn btn-sm btn-success mt-2"><span class="mdi mdi-toggle-switch"></span></a>
+                                        <form action="{{route('admin.service.destroy',$service->id)}}" method="POST" >
+                                            @method('DELETE')
+                                            @csrf
+                                            <button onclick="return confirm('Are you sure to delete')" class=" btn btn-sm btn-danger mt-2"><span class="mdi mdi-delete-circle"></span></button>
+                                        </form>
                                     </td>
                                 </tr>
                             @endforeach

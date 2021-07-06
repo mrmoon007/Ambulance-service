@@ -30,8 +30,18 @@
 
               <div class="row">
                 @foreach ($f_services as $f_service)
+                {{-- <div class="col-lg-4 col-md-6">
+                    <div class="box">
+                        
+                      <div class="btn-wrap">
+                        <img src="{{ asset($f_service->image) }}" class="img-fluid" alt="">
+                        <h4>{{ $f_service->title }}</h4>
+                        <p>{{ $f_service->description }}</p>
+                      </div>
+                    </div>
+                  </div> --}}
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="icon-box iconbox-blue">
+                        <div class="icon-box ">
                             <img src="{{ asset($f_service->image) }}" class="img-fluid" alt="">
                             <h4>{{ $f_service->title }}</h4>
                             <p>{{ $f_service->description }}</p>

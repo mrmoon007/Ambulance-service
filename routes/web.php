@@ -39,6 +39,8 @@ Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
     Route::resource('/slider',SliderController::class);
     Route::resource('/contact',ContactController::class);
     Route::resource('/service',ServiceController::class);
+    Route::get('/service/status/{id}',[ServiceController::class,'Status'])->name('service.status');
+    Route::get('/slider/status/{id}',[SliderController::class,'Status'])->name('slider.status');
     Route::get('/',[BackendController::class,'Admin'])->name('backend.admin');
     Route::get('/logout',[BackendController::class,'Logout'])->name('backend.logout');
     Route::get('/password',[BackendController::class,'Cpassword'])->name('backend.password');

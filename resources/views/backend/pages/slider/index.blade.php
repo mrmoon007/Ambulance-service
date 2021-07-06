@@ -45,7 +45,7 @@
                                         @endif
                                     </td>
                                     <td>
-                                        <a href="" class="btn btn-sm btn-info "><span class="mdi mdi-toggle-switch"></span></a>
+                                        <a href="{{ route('admin.slider.status',$slider->id) }}" class="btn btn-sm btn-info "><span class="mdi mdi-toggle-switch"></span></a>
                                         <form action="{{route('admin.slider.destroy',$slider->id)}}" method="POST" >
                                             @method('DELETE')
                                             @csrf

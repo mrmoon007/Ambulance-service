@@ -110,4 +110,20 @@ class SliderController extends Controller
 
         return redirect()->back();
     }
+
+    public function Status($id)
+    {
+        $service=Slider::find($id)->status;
+        $data=array();
+        if($service=='1'){
+            $data['status']=0;
+        }
+        else{
+            $data['status']=1;
+        }
+
+        Slider::find($id)->update($data);
+
+        return Redirect()->back();
+    }
 }
