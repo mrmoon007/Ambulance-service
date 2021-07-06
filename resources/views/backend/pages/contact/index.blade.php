@@ -42,7 +42,7 @@
                                 <td>{{ $contact->state }}</td>
                                 <td>{{ $contact->country }}</td>
                                 <td>
-                                    <a href="{{ route('admin.contact.edit',$contact->id) }}" class="btn btn-sm btn-info">Edit</a>
+                                    <a href="{{ route('admin.contact.edit',$contact->id) }}" class="btn btn-sm btn-info"><span class="mdi mdi-square-edit-outline"></span></a>
 
                                     {{-- <a href="" onclick="return confirm('Are you sure to delete')" class="btn btn-sm btn-danger">Delete</a> --}}
                                 </td>

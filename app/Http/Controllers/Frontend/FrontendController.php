@@ -27,7 +27,8 @@ class FrontendController extends Controller
 
     public function services()
     {
-        return view('frontend.pages.services');
+        $Acportfolio=Portfolio::where('cetagory','1')->first();
+        return view('frontend.pages.services',compact('Acportfolio'));
     }
 
     public function portfolio()

@@ -3,6 +3,7 @@
 use App\Http\Controllers\Backend\BackendController;
 use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\ProtefolioController;
+use App\Http\Controllers\Backend\ServiceController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Frontend\FrontendController;
 use Illuminate\Support\Facades\Route;
@@ -37,6 +38,8 @@ Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
 
     Route::resource('/slider',SliderController::class);
     Route::resource('/contact',ContactController::class);
+    Route::resource('/service',ServiceController::class);
+    Route::get('/',[BackendController::class,'Admin'])->name('backend.admin');
     Route::get('/logout',[BackendController::class,'Logout'])->name('backend.logout');
     Route::get('/password',[BackendController::class,'Cpassword'])->name('backend.password');
     Route::post('/password/update',[BackendController::class,'UpdatePassword'])->name('backend.password.update');

@@ -68,4 +68,9 @@ class BackendController extends Controller
         }
     }
 
+    public function Admin()
+    {
+        return redirect()->route('login');
+    }
+
 }

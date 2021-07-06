@@ -29,7 +29,7 @@ class ProtefolioController extends Controller
         foreach ($image as $multi_img) {
 
             $name_gen = hexdec(uniqid()) . '.' . $multi_img->getClientOriginalExtension();
-            Image::make($multi_img)->resize(400, 400)->save('image/portfolio/' . $name_gen);
+            Image::make($multi_img)->resize(300, 300)->save('image/portfolio/' . $name_gen);
 
             $last_img = 'image/portfolio/' . $name_gen;
 
