@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\SocialLink;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -14,10 +15,23 @@ class BackendController extends Controller
     public function __construct(){
         $this->middleware('auth');
     }
-    
+
     public function SocialMedia()
     {
-        return view('backend.pages.site_setting.social_media');
+        $socialLink=SocialLink::first();
+        return view('backend.pages.site_setting.social_media',compact('socialLink'));
+    }
+
+    public function SocialLink(Request $request,$id)
+    {
+        $data=array();
+        $data['facebook']=$request->facebook;
+        $data['twitter']=$request->twitter;
+        $data['skype']=$request->skype;
+        $data['linkedin']=$request->linkedin;
+        $data['instragram']=$request->instragram;
+        SocialLink::where('id',$id)->update($data);
+        return redirect()->back()->with('success','Social link Is update Successfully');
     }
 
     public function Logout(){

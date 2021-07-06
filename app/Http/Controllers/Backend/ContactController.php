@@ -85,7 +85,7 @@ class ContactController extends Controller
         $data['state']=$request->state;
         $data['country']=$request->country;
         Contact::where('id',$id)->update($data);
-        return redirect()->route('admin.contact.index');
+        return redirect()->route('admin.contact.index')->with('success','Contact Is update Successfully');
     }
 
     /**

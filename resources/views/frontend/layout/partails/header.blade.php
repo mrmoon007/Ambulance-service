@@ -18,12 +18,14 @@
 
         </ul>
       </nav><!-- .nav-menu -->
-
+      @php
+          $f_socialLink=App\Models\SocialLink::first();
+      @endphp
       <div class="header-social-links">
-        <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
-        <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
-        <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+        <a href="{{ $f_socialLink->twitter }}" target="_blank" class="twitter"><i class="icofont-twitter"></i></a>
+        <a href="{{ $f_socialLink->facebook }}" target="_blank" class="facebook"><i class="icofont-facebook"></i></a>
+        <a href="{{ $f_socialLink->instagram }}" target="_blank" class="instagram"><i class="icofont-instagram"></i></a>
+        <a href="{{ $f_socialLink->linkedin }}" target="_blank" class="linkedin"><i class="icofont-linkedin"></i></i></a>
       </div>
 
     </div>

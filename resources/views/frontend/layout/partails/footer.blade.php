@@ -59,19 +59,19 @@
           &copy; Copyright <strong><span>2021</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/company-free-html-bootstrap-template/ -->
+         
           Developed by <a href="">MR Moon</a>
         </div>
       </div>
+      @php
+          $f_socialLink=App\Models\SocialLink::first();
+      @endphp
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a href="{{ $f_socialLink->twitter }}" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="{{ $f_socialLink->facebook }}" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="{{ $f_socialLink->instagran }}" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="{{ $f_socialLink->skype }}" target="_blank" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="{{ $f_socialLink->linkedin }}" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
     </div>
   </footer><!-- End Footer -->
