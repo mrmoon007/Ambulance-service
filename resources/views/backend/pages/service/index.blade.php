@@ -35,9 +35,17 @@
                                 <tr>
                                     <td>{{ $key+1 }}</td>
                                     <td>{{ $service->title }}</td>
-                                    <td>{{ $service->image }}</td>
+                                    <td>
+                                        <img src="{{ asset($service->image) }}" style="height:100px; width:100px;" >
+                                    </td>
                                     <td>{{ $service->description }}</td>
-                                    <td>{{ $service->status }}</td>
+                                    <td>
+                                        @if ($service->status==1)
+                                           <span class="badge badge-success">action</span>
+                                        @else
+                                            <span class="badge badge-danger">inactive</span>
+                                        @endif
+                                    </td>
                                     <td>
                                         <a href="" class="btn btn-sm btn-info">Edit</a>
     

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
 use App\Models\Portfolio;
+use App\Models\Service;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,8 @@ class FrontendController extends Controller
         $Acportfolio=Portfolio::where('cetagory','1')->limit(3)->get();
         $nonAcportfolio=Portfolio::where('cetagory','2')->limit(3)->get();
         $frezportfolio=Portfolio::where('cetagory','3')->limit(3)->get();
-        return view('frontend.pages.index',compact('f_slideres','fcontact','Acportfolio','nonAcportfolio','frezportfolio'));
+        $f_services=Service::where('status','1')->get();
+        return view('frontend.pages.index',compact('f_slideres','fcontact','Acportfolio','nonAcportfolio','frezportfolio','f_services'));
     }
 
     public function about()
@@ -27,8 +29,8 @@ class FrontendController extends Controller
 
     public function services()
     {
-        $Acportfolio=Portfolio::where('cetagory','1')->first();
-        return view('frontend.pages.services',compact('Acportfolio'));
+        $f_services=Service::where('status','1')->get();
+        return view('frontend.pages.services',compact('f_services'));
     }
 
     public function portfolio()

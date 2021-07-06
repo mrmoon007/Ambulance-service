@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Service;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Image;
 
 class ServiceController extends Controller
 {
@@ -26,7 +28,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        return view('backend.pages.service.create',compact('services'));
+        return view('backend.pages.service.create');
     }
 
     /**
@@ -37,7 +39,25 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //return $request;
+        $service_image =  $request->file('image');
+
+
+        $name_gen = hexdec(uniqid()).'.'.$service_image->getClientOriginalExtension();
+        Image::make($service_image)->resize(250,250)->save('image/service/'.$name_gen);
+
+        $last_img = 'image/service/'.$name_gen;
+
+
+        Service::insert([
+            'title' => $request->title,
+            'description' => $request->description,
+            'status' => $request->status,
+            'image' => $last_img,
+            'created_at' => Carbon::now()
+        ]);
+
+        return Redirect()->route('admin.service.index');
     }
 
     /**

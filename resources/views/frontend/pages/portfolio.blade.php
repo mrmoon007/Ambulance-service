@@ -67,10 +67,10 @@
 
             @foreach ($frezportfolio as $frezitem)
                 <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                    <img src="{{ asset($nonacitem->image) }}" class="img-fluid" alt="">
+                    <img src="{{ asset($frezitem->image) }}" class="img-fluid" alt="">
                     <div class="portfolio-info">
                     <h4>Freezer Van Ambulance</h4>
-                    <a href="{{ asset($nonacitem->image) }}" data-gall="portfolioGallery" class="venobox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+                    <a href="{{ asset($frezitem->image) }}" data-gall="portfolioGallery" class="venobox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
 
                     </div>
                 </div>
