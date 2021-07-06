@@ -10,6 +10,10 @@ use Image;
 
 class ProtefolioController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+    }
+    
     public function portfolioCreate()
     {
         return view('backend.pages.protfolio.create');

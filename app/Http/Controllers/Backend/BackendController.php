@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\Hash;
 
 class BackendController extends Controller
 {
+
+    public function __construct(){
+        $this->middleware('auth');
+    }
+    
     public function SocialMedia()
     {
         return view('backend.pages.site_setting.social_media');
