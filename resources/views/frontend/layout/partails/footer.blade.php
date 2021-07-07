@@ -8,7 +8,7 @@
                 $fcontact = DB::table('contacts')->first();
             @endphp
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>shina ambulance</h3>
+            <h3>sina ambulance</h3>
             <p>
               {{ $fcontact->address }} <br>
               {{ $fcontact->state }}<br>

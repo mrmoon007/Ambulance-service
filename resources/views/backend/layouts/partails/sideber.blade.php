@@ -38,6 +38,12 @@
                                 </a>
                             </li>
                             <li>
+                                <a class="sidenav-item-link" href="{{ route('admin.backend.about') }}">
+                                    <span class="nav-text">About</span>
+
+                                </a>
+                            </li>
+                            <li>
                                 <a class="sidenav-item-link" href="{{ route('admin.slider.index') }}">
                                     <span class="nav-text">Slider</span>
 

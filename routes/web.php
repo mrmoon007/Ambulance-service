@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\BackendController;
 use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\ProtefolioController;
@@ -46,6 +47,8 @@ Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
     Route::get('/logout',[BackendController::class,'Logout'])->name('backend.logout');
     Route::get('/password',[BackendController::class,'Cpassword'])->name('backend.password');
     Route::post('/password/update',[BackendController::class,'UpdatePassword'])->name('backend.password.update');
+    Route::get('/about',[AboutController::class,'editAbout'])->name('backend.about');
+    Route::post('/about/update',[AboutController::class,'UpdateAbout'])->name('backend.about.update');
     Route::get('/profile',[BackendController::class,'Cprofile'])->name('backend.profile');
     Route::post('/profile/update',[BackendController::class,'UpdateProfile'])->name('backend.profile.update');
     Route::get('/portfolio/index',[ProtefolioController::class,'portfolioIndex'])->name('backend.portfolioIndex');
@@ -59,3 +62,5 @@ Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('backend.pages.index');
 })->name('dashboard');
+
+// backend route end
