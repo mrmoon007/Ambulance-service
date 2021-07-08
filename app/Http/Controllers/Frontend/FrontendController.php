@@ -7,7 +7,7 @@ use App\Models\Contact;
 use App\Models\Portfolio;
 use App\Models\Service;
 use App\Models\Slider;
-use App\Models\SocialLink;
+use App\Models\About;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -16,16 +16,18 @@ class FrontendController extends Controller
     {
         $f_slideres= Slider::where('status','1')->limit(6)->get();
         $fcontact=Contact::first();
+        $fabout=About::first();
         $Acportfolio=Portfolio::where('cetagory','1')->limit(3)->get();
         $nonAcportfolio=Portfolio::where('cetagory','2')->limit(3)->get();
         $frezportfolio=Portfolio::where('cetagory','3')->limit(3)->get();
         $f_services=Service::where('status','1')->limit(3)->get();
-        return view('frontend.pages.index',compact('f_slideres','fcontact','Acportfolio','nonAcportfolio','frezportfolio','f_services',));
+        return view('frontend.pages.index',compact('fabout','f_slideres','fcontact','Acportfolio','nonAcportfolio','frezportfolio','f_services',));
     }
 
     public function about()
     {
-        return view('frontend.pages.about');
+        $fabout=About::first();
+        return view('frontend.pages.about',compact('fabout'));
     }
 
     public function services()

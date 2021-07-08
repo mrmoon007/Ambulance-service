@@ -61,7 +61,7 @@
                                     <input type="file" value="{{ $about->image }}" name="image" class="form-control-file" >
                                 </div>
                                 <div class="col-6">
-                                    <img class="m-2" src="{{ asset($about->image) }}" style="height:150px; width:300px;" >
+                                    <img class="m-2" src="{{ asset($about->image) }}" style="height:150px; width:250px;" >
                                 </div>
                             </div>
                         </div>

@@ -9,6 +9,10 @@ use Image;
 
 class AboutController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+    }
+    
     public function editAbout()
     {
         $about=About::first();
@@ -43,6 +47,6 @@ class AboutController extends Controller
 
         ]);
 
-        return Redirect()->back();
+        return Redirect()->back()->with('success','About Is updated Successfully');
     }
 }

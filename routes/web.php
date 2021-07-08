@@ -35,6 +35,7 @@ Route::get('/contact',[FrontendController::class,'contact'])->name('frontend.con
 // frontend route end here
 
 // backend route start here
+
 Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
 
     Route::resource('/slider',SliderController::class);
