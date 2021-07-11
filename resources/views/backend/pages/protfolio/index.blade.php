@@ -38,19 +38,21 @@
                                             AC Ambulance
                                         @elseif ($portfolio->cetagory=='2')
                                             Non-AC Ambulance
+                                        @elseif ($portfolio->cetagory=='4')
+                                            Rent-A-car
                                         @else
                                             Freezer Van Ambulance
                                         @endif
                                     </td>
                                     <td>
                                         {{-- <a href="{{ route('admin.backend.portfolioCreate',$portfolio->id) }}" class="btn btn-sm btn-info">Edit</a> --}}
-    
+
                                         <a href="{{ route('admin.backend.portfolioDelete',$portfolio->id) }}" onclick="return confirm('Are you sure to delete')" class="btn btn-sm btn-danger"><span class="mdi mdi-delete-circle"></span></a>
                                     </td>
                                 </tr>
                             @endforeach
                         </tbody>
-    
+
                     </table>
                 </div>
             </div>

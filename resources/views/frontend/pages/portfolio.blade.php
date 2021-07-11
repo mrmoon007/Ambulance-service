@@ -1,7 +1,7 @@
 @extends('frontend.layout.master')
 
 @section('title')
-
+portfolio
 @endsection
 
 @section('css')
@@ -35,7 +35,8 @@
                 <li data-filter=".filter-app">AC Ambulance
                 </li>
                 <li data-filter=".filter-web">Non-AC Ambulance</li>
-                <li data-filter=".filter-card">Freezer Van Ambulance</li>
+                <li data-filter=".filter-card">Freezer Van </li>
+                <li data-filter=".filter-car">Rent-A-Car </li>
               </ul>
             </div>
           </div>
@@ -75,6 +76,17 @@
                     </div>
                 </div>
             @endforeach
+
+            @foreach ($rentAcars as $rentAcar)
+            <div class="col-lg-4 col-md-6 portfolio-item filter-car">
+                <img src="{{ asset($rentAcar->image) }}" class="img-fluid" alt="ambulance">
+                <div class="portfolio-info">
+                <h4>Rent-A-Car</h4>
+                <a href="{{ asset($rentAcar->image) }}" data-gall="portfolioGallery" class="venobox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+
+                </div>
+            </div>
+        @endforeach
 
           </div>
 

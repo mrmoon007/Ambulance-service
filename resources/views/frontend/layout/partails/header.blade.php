@@ -2,9 +2,10 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="{{ route('frontend.index') }}">sina<span class="text-danger"> Ambulance</span></a></h1>
+      {{-- <h1 class="logo mr-auto"><a href="{{ route('frontend.index') }}">sina<span class="text-danger"> Ambulance</span></a></h1> --}}
       <!-- Uncomment below if you prefer to use an image logo -->
-      {{-- <a href="index.html" class="logo mr-auto"><img src="{{ asset('public/frontend/assets/img/logo.png') }}" alt="" class="img-fluid"></a> --}}
+      <a href="index.html" class="logo mr-1 "><img src="{{ asset('public/frontend/assets/img/logo.jpeg') }}" alt="ambulance" class="img-fluid"></a>
+      <h1 class="logo mr-auto"><a href="{{ route('frontend.index') }}"><span>sina</span> <span class="text-danger"> Ambulance</span></a></h1>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>

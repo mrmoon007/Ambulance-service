@@ -6,8 +6,10 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>@yield('title')</title>
-  <meta content="" name="descriptison">
+  <meta content="AC | ICU | NICU | Air Ambulance | Freezer Van | Call : +88 01677808387" name="descriptison">
   <meta content="" name="keywords">
+  <!-- FAVICON -->
+  <link href="{{ asset('public/frontend/assets/img/logo.jpeg') }}" rel="shortcut icon" />
 
   @include('frontend.layout.partails.css')
 

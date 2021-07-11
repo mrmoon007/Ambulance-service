@@ -1,7 +1,7 @@
 @extends('frontend.layout.master')
 
 @section('title')
-
+contact
 @endsection
 
 @section('css')

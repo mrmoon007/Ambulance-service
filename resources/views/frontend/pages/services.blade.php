@@ -1,7 +1,7 @@
 @extends('frontend.layout.master')
 
 @section('title')
-
+service
 @endsection
 
 @section('css')
@@ -32,7 +32,7 @@
                 @foreach ($f_services as $f_service)
                 {{-- <div class="col-lg-4 col-md-6">
                     <div class="box">
-                        
+
                       <div class="btn-wrap">
                         <img src="{{ asset($f_service->image) }}" class="img-fluid" alt="">
                         <h4>{{ $f_service->title }}</h4>

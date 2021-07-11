@@ -1,7 +1,7 @@
 @extends('frontend.layout.master')
 
 @section('title')
-
+about
 @endsection
 
 @section('css')
@@ -130,7 +130,7 @@
 
         </div>
       </section><!-- End Our Team Section --> --}}
-  
+
 @endsection
 
 @section('script')

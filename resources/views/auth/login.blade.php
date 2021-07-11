@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title></title>
+  <title>admin login</title>
 
   <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Poppins:400,500,600,700|Roboto:400,500" rel="stylesheet"/>
@@ -27,7 +27,7 @@
 
 
   <!-- FAVICON -->
-  <link href="{{ asset('public/backend/assets/img/favicon.png') }}" rel="shortcut icon" />
+  <link href="{{ asset('public/frontend/assets/img/logo.jpeg') }}" rel="shortcut icon" />
 
 
   <script src="{{ asset('public/backend/assets/plugins/nprogress/nprogress.js') }}"></script>

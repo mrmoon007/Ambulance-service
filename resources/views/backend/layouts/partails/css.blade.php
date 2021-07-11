@@ -11,9 +11,8 @@
   <link id="sleek-css') }}" rel="stylesheet" href="{{ asset('public/backend/assets/css/sleek.css') }}" />
 
 
-
-  <!-- FAVICON -->
-  <link href="{{ asset('public/backend/assets/img/favicon.png') }}" rel="shortcut icon" />
+   <!-- FAVICON -->
+   <link href="{{ asset('public/frontend/assets/img/logo.jpeg') }}" rel="shortcut icon" />
 
   <script src="{{ asset('public/backend/assets/plugins/nprogress/nprogress.js') }}"></script>
 

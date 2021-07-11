@@ -29,6 +29,7 @@
                             <option value="1">AC Ambulance</option>
                             <option value="2">Non-AC Ambulance</option>
                             <option value="3">Freezer Van Ambulance</option>
+                            <option value="4">Rent-A-Car</option>
                         </select>
 
                     </div>
@@ -37,7 +38,7 @@
                         <input type="file" name="image[]" class="form-control-file" multiple="" >
                     </div>
                     <div class="form-footer pt-4 pt-5 mt-4 border-top">
-                        <button type="submit" class="btn btn-primary btn-default">Update</button>
+                        <button type="submit" class="btn btn-primary btn-default">Submit</button>
 
                     </div>
                 </form>
